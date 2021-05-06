@@ -16,10 +16,6 @@ def move(board, index, current_player)
   board[index] = current_player
 end
 
-#def position_taken?(board, location)
-#  board[location] != " " && board[location] != ""
-#end
-
 def position_taken?(board, index)
   !(board[index].nil? || board[index] == " ")
 end
@@ -49,7 +45,6 @@ def turn_count(board)
 end
   counter
 end
-# returns number of turns that have been played
 
 def current_player(board)
   turn_count(board) % 2 == 0? "X" : "O"
